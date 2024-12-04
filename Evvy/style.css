@@ -178,7 +178,7 @@
 		float: left;
 		width: 100%;
 		margin: 0 0 0 0;
-		padding: 4vw 0 4vw 0;
+		padding: 4vw 0 0 0;
 		font-family: 'Manrope';
 	}
 	.stats .item{
@@ -191,17 +191,47 @@
 		margin: 0 0 2vw 0;
 	}
 	.stats .item span.icon{
-		font-size: 4vw;
+		font-size: 3vw;
 		margin: 0 0 1vw 0;
 	}
 	.stats .item h4{
-		font-size: 3.5vw;
+		font-size: 2vw;
 		font-weight: 900;
 		margin-bottom: 1vw;
 	}
 	.stats .item h5{
-		font-size: 1.3vw;
+		font-size: 1.2vw;
 		font-weight: normal;
+	}
+
+
+
+
+	.for-section {
+		float: left;
+		width: 100%;
+		margin: 0 0 0 0;
+		padding: 6vw 0;
+		font-family: 'Manrope';
+	}
+	.for-section .container {
+		background-color: #e3f5ff;
+	}
+	.for-section .items_wrapper {
+		width: 70%;
+		padding: 3vw 0vw;
+	}
+	.for-section .item {
+		text-align: center;
+		padding: 0 1vw;
+	}
+	.for-section .item h4 {
+		font-size: 1.5vw;
+		font-weight: 900;
+		margin-bottom: 1vw;
+	}
+	.for-section .item p {
+		font-size: 1vw;
 	}
 
 
@@ -212,7 +242,7 @@
 	}
 	.sectors h2{
 		color: #000;
-		font-size: 5vw;
+		font-size: 4vw;
 		font-weight: 900;
 		margin-bottom: 4vw;
 	}
@@ -224,11 +254,11 @@
 		/* margin: 0 0 2vw 0; */
 	}
 	.sectors .item span.icon{
-		font-size: 3vw;
+		font-size: 2.5vw;
 		margin: 0 0 1vw 0;
 	}
 	.sectors .item h4{
-		font-size: 2vw;
+		font-size: 1.5vw;
 		font-weight: 900;
 		margin-bottom: 1vw;
 	}
@@ -240,7 +270,7 @@
 	}
 	.services h2{
 		color: #000;
-		font-size: 5vw;
+		font-size: 4vw;
 		font-weight: 900;
 		margin-bottom: 4vw;
 	}
