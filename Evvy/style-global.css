@@ -151,6 +151,11 @@
 		align-items: center;
 		justify-content: space-evenly;
 	}
+	.dgrid_basic {
+  		display: grid;
+  		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  		gap: 50px; /* Adjust gap between items as needed */
+}
 	.dflex_valign{
 		display: flex;
 		align-items: center;

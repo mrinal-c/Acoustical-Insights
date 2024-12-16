@@ -242,16 +242,21 @@
 	}
 	.sectors h2{
 		color: #000;
-		font-size: 4vw;
+		font-size: 3vw;
 		font-weight: 900;
 		margin-bottom: 4vw;
 	}
 	.sectors .item{
-		float: left;
-		/* width: 40%; */
 		text-align: center;
-		/* padding: 0 0 3vw 0; */
-		/* margin: 0 0 2vw 0; */
+		padding: 1vw 0vw;
+	}
+	.sectors .item:hover {
+		transform: scale(1.05); /* Add a slight zoom effect on hover */
+  		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+	}
+	.sectors a {
+		text-decoration: none;
+		color: black
 	}
 	.sectors .item span.icon{
 		font-size: 2.5vw;
@@ -260,7 +265,6 @@
 	.sectors .item h4{
 		font-size: 1.5vw;
 		font-weight: 900;
-		margin-bottom: 1vw;
 	}
 
 
@@ -270,7 +274,7 @@
 	}
 	.services h2{
 		color: #000;
-		font-size: 4vw;
+		font-size: 3vw;
 		font-weight: 900;
 		margin-bottom: 4vw;
 	}
@@ -324,7 +328,28 @@
 
 
 	
-	
+	.detail {
+		padding:15vw 0vw;
+		font-family: 'Manrope';
+	}
+	.detail h2{
+		color: #000;
+		font-size: 3vw;
+		font-weight: 900;
+		margin-bottom: 4vw;
+	}
+	.detail .item {
+		margin: 0.75vw 0vw;
+	}
+	.detail .item .title {
+		font-weight: bold;
+		padding: 0.5vw 0vw;
+	}
+	.detail .item .location {
+		font-weight: normal;
+		font-style: italic;
+	}
+
 
 
 
