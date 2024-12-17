@@ -116,6 +116,19 @@
 		width: 100%;
 		height: auto;
 	}
+	.banner .owl-carousel .item  .note {
+		position: absolute;
+		bottom: 10px;
+		background: rgba(0, 0, 0, 0.6); /* Semi-transparent grey */
+		color: white;
+		padding: 8px 12px;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		width: 100%;
+		text-align: left;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}  
+
 	/* -- BREAK -- */
 
 

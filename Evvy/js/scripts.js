@@ -38,29 +38,25 @@ $(document).ready(function() {
 		autoplayTimeout: 4000,
 		slideTransition: 'ease',
 		autoplayHoverPause: true,
+		navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
 	    loop:true,
-	    //center: true,
+		items: 1,
 	    margin:55,
-	    nav:false,
+	    nav:true,
 	    dots: false,
 	    responsive:{
 	        0:{
 	            items:1
 	        },
 	        440:{
-	            items:2
+	            items:1
 	        },
 	        960:{
-	            items:4
+	            items:1
 	        },
 	        2200:{
-	            items:4
+	            items:1
 	        }
 	    }
-	});
-
-	$( function() {
-	    $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+1M +10D" });
-	    $( "#datepicker" ).datepicker('option', 'dateFormat', 'DD, d MM, yy');
 	});
 });
