@@ -9,7 +9,7 @@
 
 
 	.topbar{
-		padding: 1vw 0;
+		padding: 1.5vw 0;
 		background: #000;
 		position: relative;
 		font-family: 'Manrope';
@@ -113,12 +113,31 @@
 	}
 	.banner img{
 		float: right;
-		width: 100%;
-		height: auto;
+		height: 600px;
+	}
+	.banner .owl-carousel .banner-prev {
+		background-color: white;
+		position: absolute;
+		padding: 1vw;
+		left: 10px;
+		bottom: 50%;
+	}
+	.banner .owl-carousel .banner-prev:hover {
+		cursor: pointer
+	}
+	.banner .owl-carousel .banner-next:hover {
+		cursor: pointer
+	}
+	.banner .owl-carousel .banner-next {
+		background-color: white;
+		position: absolute;
+		right: 10px;
+		padding: 1vw;
+		bottom: 50%;
 	}
 	.banner .owl-carousel .item  .note {
 		position: absolute;
-		bottom: 10px;
+		bottom: 0px;
 		background: rgba(0, 0, 0, 0.6); /* Semi-transparent grey */
 		color: white;
 		padding: 8px 12px;
@@ -142,7 +161,7 @@
 	}	
 	.about .imagearea{
 		float: right;
-		width: 45%;
+		width: 30%;
 		max-width: 50%;
 		margin: 0 0 0 0;
 	}
@@ -341,26 +360,46 @@
 
 
 	
-	.detail {
+	.sector-detail {
 		padding:15vw 0vw;
 		font-family: 'Manrope';
 	}
-	.detail h2{
+	.sector-detail h2{
 		color: #000;
 		font-size: 3vw;
 		font-weight: 900;
 		margin-bottom: 4vw;
 	}
-	.detail .item {
-		margin: 0.75vw 0vw;
+	.sector-detail h3 {
+		color: #000;
+		font-size: 2vw;
+		font-weight: 900;
+		margin-bottom: 1vw;
 	}
-	.detail .item .title {
-		font-weight: bold;
-		padding: 0.5vw 0vw;
+	.sector-detail .top-img {
+		float: right;
+		width: 300px;
+		height: auto;
+
 	}
-	.detail .item .location {
-		font-weight: normal;
-		font-style: italic;
+	.sector-detail .top-text {
+		display: inline;
+		font-size: larger;
+	}
+	.sector-detail .content {
+		margin: 2vw 0vw;
+	}
+	.sector-detail .content ul {
+		list-style-type: disc; /* Ensure default bullet styling */
+  		padding-left: 2vw; /* Add indentation */
+  		margin: 0; /* Reset any margin if needed */
+	}
+	.sector-detail .content li {
+		margin: 0.15vw 0vw;
+	}
+	.sector-detail .relevant-services-row {
+		display: flex;
+		gap: 2vw;
 	}
 
 

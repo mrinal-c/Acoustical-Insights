@@ -1,4 +1,12 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require './src/Exception.php';
+require './src/PHPMailer.php';
+require './src/SMTP.php';
+
 if(isset($_POST['email']) && !empty($_POST['email'])){
 
 		$name = $_POST["name"];
@@ -36,17 +44,40 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 		// More headers
 		$headers .= 'From: '.$name.' <noreply@'.$_SERVER['SERVER_NAME'].'>' . "\r\n" . 'Reply-To: '.$email."\r\n";
-		$sendmail = mail($to,$mail_subject,$mail_message,$headers);
-		//$sendmail = 'ok';
-		if($sendmail){
+		$mail = new PHPMailer(true);
+
+		try {
+			//Server settings
+			$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+			$mail->isSMTP();                                            //Send using SMTP
+			$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+			$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+			$mail->Username   = 'cmrinal16@gmail.com';                     //SMTP username
+			$mail->Password   = 'geyo vhnc guvi lbpr';                               //SMTP password
+			$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
+			$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+			//Recipients
+			$mail->setFrom($email, $name);
+			$mail->addAddress($to, 'Joe User');     //Add a recipient
+
+
+			//Content
+			$mail->isHTML(true);                                  //Set email format to HTML
+			$mail->Subject = $mail_subject;
+			$mail->Body    = $mail_message;
+
+			$mail->send();
 			$response['status'] = 'ok';
 			$response['msg'] = 'Message Sent Successfully.';
 			echo json_encode($response);
-		}else{
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 			$response['status'] = 'Error';
 			$response['msg'] = 'Something Went Wrong. Error Code: 2';
 			echo json_encode($response);
 		}
+	
 			
 
 }else{
