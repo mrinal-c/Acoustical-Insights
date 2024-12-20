@@ -217,7 +217,7 @@
 
         <div class="dgrid_basic">
           <div class="item">
-            <a href="/Evvy/healthcare">
+            <a href="/Evvy/healthcare/index.html">
               <div>
                 <span class="fa-solid fa-stethoscope icon"></span>
                 <h4>Healthcare</h4>
@@ -459,23 +459,7 @@
         <h2>Contact Us</h2>
         <h3>Reach out to me for inquiries, quotes, or questions</h3>
 
-        <div class="contactblock flf dflex_basic_2 dflex_wrap dflex_fd_rr">
-          <div class="contactinfo">
-            <div class="infowrap flf">
-              <div class="info dflex_valign dflex_wrap">
-                <span class="fa-solid fa-phone-volume"></span>
-                <h4>Call Us:</h4>
-                <p>+1 (704) 516-7004</p>
-              </div>
-              <div class="info">
-                <span class="fa-solid fa-envelope"></span>
-                <h4>Email Us:</h4>
-                <p>
-                  <a href="mailto:#"> acousticalinsights@gmail.com </a>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="contactblock flf dflex_basic_2 dflex_wrap">
 
           <form
             class="contactform"
@@ -486,6 +470,7 @@
             <input type="text" name="name" placeholder="Name*" required />
             <input
               type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               name="email"
               placeholder="Email Address*"
               required
@@ -495,6 +480,7 @@
               Send Message <span class="fa-solid fa-angle-right"></span>
             </button>
           </form>
+          <div id="form-response" style="margin-top: 10px; color: green;"></div>
         </div>
         <!--contactblock-->
       </div>
@@ -506,17 +492,7 @@
         <div class="copyright">
           Copyright &copy; <span class="year"></span> 2024 <br />
           Christopher Barnobi - Acoustical Insights
-
-          <!-- | Template By <a href="https://layoutflow.com/">LayoutFlow</a> -->
         </div>
-
-        <!-- <div class="socialmedia">
-          <a href="#"><span class="fa-brands fa-facebook"></span></a>
-          <a href="#"><span class="fa-brands fa-twitter"></span></a>
-          <a href="#"><span class="fa-brands fa-instagram"></span></a>
-          <a href="#"><span class="fa-brands fa-pinterest"></span></a>
-          <a href="#"><span class="fa-brands fa-youtube"></span></a>
-        </div> -->
       </div>
     </footer>
     <!--footer-->
@@ -532,4 +508,3 @@
     <script src="js/jquery.counterup.js"></script>
   </body>
 </html>
-<!-- Template By: LayoutFlow, URL: https://layoutflow.com/  -->

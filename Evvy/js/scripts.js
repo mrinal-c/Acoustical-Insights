@@ -32,6 +32,8 @@ $(document).ready(function() {
 		}
 	});
 
+	
+
 	var owl = $('.relevant-services-owl-carousel').owlCarousel({
 		autoplay: true,
 		autoplayTimeout: 4000,
