@@ -48,7 +48,7 @@ $(document).ready(function() {
 	            items:1
 	        },
 	        440:{
-	            items:3
+	            items:2
 	        },
 	        960:{
 	            items:3
@@ -68,7 +68,7 @@ $(document).ready(function() {
 	    loop:true,
 		items: 1,
 	    margin:55,
-	    nav:true,
+	    nav:false,
 	    dots: false,
 	    responsive:{
 	        0:{
