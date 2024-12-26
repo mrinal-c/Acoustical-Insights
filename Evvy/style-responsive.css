@@ -186,7 +186,7 @@
 	}
 
 	.sectors h2 {
-	font-size:36px;
+	font-size:6vw;
   }
   .sectors .container .item span.icon {
 	font-size:3vw
@@ -211,7 +211,7 @@
 		padding:0 0 40px 0;
 	}
 	.services h2{
-		font-size: 36px;
+		font-size: 6vw;
 		margin-bottom: 25px;
 	}
 	.service_items .item{
@@ -374,7 +374,7 @@
 
 @media(max-width:540px){
 	.banner .container h5 {
-		font-size: 6vw;
+		font-size: 8vw;
 	}
 	.banner img {
 		height: 400px;
@@ -414,7 +414,7 @@
 		padding: 8vw 0vw;
 	}
 
-	
+
   .sectors .container .item span.icon {
 	font-size:6vw
   }
