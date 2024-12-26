@@ -379,8 +379,9 @@
 	}
 	.sector-detail .top-img {
 		float: right;
-		width: 300px;
+		width: 350px;
 		height: auto;
+		margin: 1rem 0rem;
 
 	}
 	.sector-detail .top-text {
@@ -402,8 +403,45 @@
 		margin-top: 8vw
 	}
 
+	.sector-detail .relevant-services .item a {
+		color: black;
+	}
+	.sector-detail .relevant-services .item .text {
+		padding-top: 1vw;
+	}
+	.sector-detail .top-content {
+		display: inline-block;
+	}
+	.sector-detail .top-content .top-imgs {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.sector-detail-sv .top-content {
+		display: flex;
+		flex-direction: row;
+	}
+	.sector-detail-sv .top-text {
+		display: flex;
+		flex-direction: column;
+		font-size: larger;
+	}
+	.sector-detail-sv .top-content .content {
+		font-size: smaller;
+	}
+	.sector-detail-sv .top-imgs {
+		width: 40%;
+	}
+	.sector-detail-sv .top-img {
+		height: 250px;
+		width: 320px;
+	}
 
 
+img {
+	border: solid 2px black;
+}
 
 
 	.reviews{

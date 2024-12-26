@@ -7,6 +7,12 @@ require './src/Exception.php';
 require './src/PHPMailer.php';
 require './src/SMTP.php';
 
+if(empty($_SESSION['captcha_code'] ) || strcasecmp($_SESSION['captcha_code'], $_POST['captcha_code']) != 0){  
+	$msg="<span style='color:red'>The Validation code does not match!</span>";// Captcha verification is incorrect.             
+}else{// Captcha verification is Correct. Final Code Execute here!              
+	$msg="<span style='color:green'>The Validation code has been matched.</span>";              
+}
+
 if(isset($_POST['email']) && !empty($_POST['email'])){
 
 		// $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
@@ -29,7 +35,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 	    }
 
 	
-		$to = "cmrinal16@gmail.com";
+		$to = "acousticalinsightswebsite@gmail.com";
 		$mail_subject = "Contact Request From $name | Message ID ".$timestamp_capture;
 		$mail_message = "
 		<br>
@@ -54,8 +60,8 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 			$mail->isSMTP();                                            //Send using SMTP
 			$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
 			$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-			$mail->Username   = 'cmrinal16@gmail.com';                     //SMTP username
-			$mail->Password   = 'tebm mglh hwxl ydsp';                               //SMTP password
+			$mail->Username   = 'acousticalinsightswebsite@gmail.com';                     //SMTP username
+			$mail->Password   = 'eqsp iptj zngg ppzl';                               //SMTP password
 
 			$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
 			$mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
