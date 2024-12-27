@@ -3,7 +3,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require_once('vendor/autoload.php');
+require './src/Exception.php';
+require './src/PHPMailer.php';
+require './src/SMTP.php';
+
+
 
 
 if(!empty($_POST['website'])) die();
@@ -70,7 +74,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 			$mail->Subject = $mail_subject;
 			$mail->Body    = $mail_message;
 
-			// $mail->send();
+			$mail->send();
 			$response['status'] = 'OK';
 			$response['msg'] = 'Message Sent Successfully.';
 			echo json_encode($response);

@@ -1,6 +1,0 @@
-{
-    "require": {
-        "s1syphos/php-simple-captcha": "^2.3",
-        "phpmailer/phpmailer": "^6.9"
-    }
-}
