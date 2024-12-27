@@ -1,8 +1,33 @@
+<?php
+include 'contactform/captcha.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Acoustical Insights provides high quality acoustics solutions for educational institutions, \
+      auditoriums, hospitals, mixed use buildings, multi family homes, hotels, and more."
+    />
+    <meta
+      name="keywords"
+      content="acoustics, measurements, education, sound isolation, \
+    room acoustics, mechanical noise control, auditoriums, classrooms, gyms, schools"
+    />
+
+    <link
+      rel="canonical"
+      href="https://www.acousticalinsights.com"
+    />
+    <meta property="og:url" content="https://www.acousticalinsights.com" />
+    <meta property="og:image" content="https://www.acousticalinsights.com/images/headshot.png" />
+    <meta property="og:description" content="Acoustical Insights provides high quality acoustics solutions for educational institutions, \
+    auditoriums, hospitals, mixed use buildings, multi family homes, hotels, and more." />
+    <meta property="og:title" content="Acoustical Insights" />
+    <meta property="og:site_name" content="Acoustical Insights" />
+
 
     <title>Acoustical Insights</title>
 
@@ -23,6 +48,11 @@
     <link href="style-global.css" rel="stylesheet" type="text/css" />
     <link href="style-responsive.css" rel="stylesheet" type="text/css" />
 
+    <script
+      src="https://www.google.com/recaptcha/enterprise.js"
+      async
+      defer
+    ></script>
     <script src="js/jquery.js"></script>
     <script src="owl-slider/owl.carousel.js"></script>
     <script src="js/scripts.js"></script>
@@ -45,7 +75,7 @@
 
     <header class="p_fixed_basic zidx2 ts_1 fw">
       <div class="container dflex_basic">
-        <a href="index.html" class="logo"
+        <a href="/" class="logo"
           ><img src="images/logo.png" alt=""
         /></a>
 
@@ -445,52 +475,14 @@
               required
             />
             <textarea name="message" placeholder="Message..."></textarea>
-            <!-- <table
-              width="400"
-              border="0"
-              align="center"
-              cellpadding="5"
-              cellspacing="1"
-              class="table"
-            >
-              <?php if(isset($msg)){?>
-              <tr>
-                <td colspan="2" align="center" valign="top">
-                  <?php echo $msg;?>
-                </td>
-              </tr>
-              <?php } ?>
-              <tr>
-                <td align="right" valign="top">Validation code:</td>
-                <td>
-                  <img
-                    src="captcha.php?rand=<?php echo rand();?>"
-                    id="captchaimg"
-                  /><br />
-                  <label for="message">Enter the code above here :</label>
-                  <br />
-                  <input id="captcha_code" name="captcha_code" type="text" />
-                  <br />
-                  Can't read the image? click
-                  <a href="javascript: refreshCaptcha();">here</a> to refresh.
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>
-                  <input
-                    name="Submit"
-                    type="submit"
-                    onclick="return validate();"
-                    value="Submit"
-                    class="button1"
-                  />
-                </td>
-              </tr>
-            </table> -->
+
+            <?php echo  ?>
+
             <button name="submit" id="contactform_btn" type="submit">
               Send Message <span class="fa-solid fa-angle-right"></span>
             </button>
+
+            <input name="website" type="text" class="website"/>
           </form>
           <div id="form-response" style="margin-top: 10px; color: green"></div>
         </div>

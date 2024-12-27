@@ -362,7 +362,7 @@
 
 	
 	.sector-detail {
-		padding:15vw 0vw 10vw 0vw;
+		padding:15vw 0vw;
 		font-family: 'Manrope';
 	}
 	.sector-detail h2{
@@ -545,6 +545,12 @@ img {
 		font-size:1.2vw;
 		font-weight: 400;
 		margin-bottom: 0;
+	}
+	.contactblock .submit-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		gap: 2vw;
 	}
 
 

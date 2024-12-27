@@ -3,21 +3,15 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require './src/Exception.php';
-require './src/PHPMailer.php';
-require './src/SMTP.php';
+require_once('vendor/autoload.php');
 
-if(empty($_SESSION['captcha_code'] ) || strcasecmp($_SESSION['captcha_code'], $_POST['captcha_code']) != 0){  
-	$msg="<span style='color:red'>The Validation code does not match!</span>";// Captcha verification is incorrect.             
-}else{// Captcha verification is Correct. Final Code Execute here!              
-	$msg="<span style='color:green'>The Validation code has been matched.</span>";              
-}
+
+if(!empty($_POST['website'])) die();
 
 if(isset($_POST['email']) && !empty($_POST['email'])){
 
-		// $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
+
 		$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-		// $message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
 		$name = $_POST["name"];
 		$message = $_POST["message"];
 
@@ -76,7 +70,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
 			$mail->Subject = $mail_subject;
 			$mail->Body    = $mail_message;
 
-			$mail->send();
+			// $mail->send();
 			$response['status'] = 'OK';
 			$response['msg'] = 'Message Sent Successfully.';
 			echo json_encode($response);

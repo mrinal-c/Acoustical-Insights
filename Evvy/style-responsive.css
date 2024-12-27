@@ -381,6 +381,23 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.sector-detail-sv .top-content {
+		flex-direction: column-reverse;
+	}
+	.sector-detail .top-content .top-imgs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.sector-detail .top-content .top-imgs img {
+		display: block;
+		float: none;
+	}
+}
+
 
 
 
@@ -439,7 +456,12 @@
 	font-size:6vw;
   }
   .sector-detail .container {
-	padding: 15vw 25px;
+	padding: 16vw 25px;
+  }
+  .sector-detail .top-img {
+	float: none;
+	width: 100%;
+	display: block;
   }
 
 	.service_items .item{

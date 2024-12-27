@@ -1,9 +1,14 @@
 <?php
-        session_start();
-        include("./captcha_generator.php");  
-        
-        /*create class object*/
-        $phptextObj = new phptextClass();       
-        /*phptext function to genrate image with text*/
-        $phptextObj->phpcaptcha('#162453','#fff',120,40,10,25);      
- ?>
+require_once('vendor/autoload.php');
+
+echo "Hello World!";
+
+use SimpleCaptcha\Builder;
+
+# First, you have to instantiate it ..
+$builder = new Builder;
+
+# Now, building a captcha is easy
+$builder->build();
+
+?>
