@@ -3,8 +3,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 use \ReCaptcha\ReCaptcha;
+use Dotenv\Dotenv;
 
 require './vendor/autoload.php';
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 
 if (!empty($_POST['website']))
@@ -28,7 +32,7 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 	$name = $_POST["name"];
 	$message = $_POST["message"];
 	$g_recaptcha_response = $_POST["g-recaptcha-response"];
-	$g_recaptcha_secret = "6LcU1a8qAAAAAMmn7yqkQsk8jQdb6UW13wUbIFC6";
+	$g_recaptcha_secret = $_ENV["RECAPTCHA_SECRET_KEY"];
 
 	$recaptcha = new ReCaptcha($g_recaptcha_secret, null);
 
@@ -76,7 +80,7 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 		$mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
 		$mail->SMTPAuth = true;                                   //Enable SMTP authentication
 		$mail->Username = 'acousticalinsightswebsite@gmail.com';                     //SMTP username
-		$mail->Password = 'eqsp iptj zngg ppzl';                               //SMTP password
+		$mail->Password =  $_ENV["SMTP_PASSWORD"];                               //SMTP password
 
 		$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
 		$mail->Port = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
