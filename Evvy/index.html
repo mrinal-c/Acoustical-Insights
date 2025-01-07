@@ -5,7 +5,11 @@ include 'contactform/captcha.php';
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      http-equiv="Content-Type"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta
       name="description"
       content="Acoustical Insights provides high quality acoustics solutions for educational institutions, \
@@ -17,17 +21,19 @@ include 'contactform/captcha.php';
     room acoustics, mechanical noise control, auditoriums, classrooms, gyms, schools"
     />
 
-    <link
-      rel="canonical"
-      href="https://www.acousticalinsights.com"
-    />
+    <link rel="canonical" href="https://www.acousticalinsights.com" />
     <meta property="og:url" content="https://www.acousticalinsights.com" />
-    <meta property="og:image" content="https://www.acousticalinsights.com/images/headshot.png" />
-    <meta property="og:description" content="Acoustical Insights provides high quality acoustics solutions for educational institutions, \
-    auditoriums, hospitals, mixed use buildings, multi family homes, hotels, and more." />
+    <meta
+      property="og:image"
+      content="https://www.acousticalinsights.com/images/headshot.png"
+    />
+    <meta
+      property="og:description"
+      content="Acoustical Insights provides high quality acoustics solutions for educational institutions, \
+    auditoriums, hospitals, mixed use buildings, multi family homes, hotels, and more."
+    />
     <meta property="og:title" content="Acoustical Insights" />
     <meta property="og:site_name" content="Acoustical Insights" />
-
 
     <title>Acoustical Insights</title>
 
@@ -59,6 +65,40 @@ include 'contactform/captcha.php';
         });
       });
     </script>
+
+    <!-- Google tag (gtag.js) for Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YZE522CLGX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YZE522CLGX");
+    </script>
+
+    <!-- Google ReCaptcha Scripts-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      function onSubmit(token) {
+        const form = document.getElementById("contactform");
+
+        // Check if the form is valid
+        if (form.checkValidity()) {
+          // Trigger the submit event manually if the form is valid
+          form.dispatchEvent(
+            new Event("submit", { bubbles: true, cancelable: true })
+          );
+        } else {
+          // If the form is invalid, trigger native validation error messages
+          form.reportValidity();
+        }
+      }
+    </script>
     <script src="contactform/contactform.js"></script>
   </head>
 
@@ -70,9 +110,7 @@ include 'contactform/captcha.php';
 
     <header class="p_fixed_basic zidx2 ts_1 fw">
       <div class="container dflex_basic">
-        <a href="/" class="logo"
-          ><img src="images/logo.png" alt=""
-        /></a>
+        <a href="/" class="logo"><img src="images/logo.png" alt="" /></a>
 
         <div class="menuicons" style="display: none">
           <a href="javascript:void();" class="shownav">
@@ -377,11 +415,18 @@ include 'contactform/captcha.php';
             />
             <textarea name="message" placeholder="Message..."></textarea>
 
-            <button name="submit" id="contactform_btn" type="submit">
+            <button
+              class="g-recaptcha"
+              data-sitekey="6LcU1a8qAAAAALAy2F9nWCfqLlemShmLdqqWHP15"
+              data-action="submit"
+              data-callback="onSubmit"
+              type="submit"
+              id="contactform_btn"
+            >
               Send Message <span class="fa-solid fa-angle-right"></span>
             </button>
 
-            <input name="website" type="text" class="website"/>
+            <input name="website" type="text" class="website" />
           </form>
           <div id="form-response" style="margin-top: 10px; color: green"></div>
         </div>

@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	$('#contactform').on('submit', function (e) {
-		e.preventDefault(); // Prevent default form submission
-	
+		e.preventDefault();
+
+		console.log("form handler")
 		const form = $(this);
 		const responseElement = $('#form-response');
 		$("#contactform_btn").html('Please wait... <span class="fas fa-circle-notch fa-spin"></span>');
