@@ -50,8 +50,7 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 
 
 
-	// $to = "acousticalinsightswebsite@gmail.com";
-	$to = "cmrinal16@gmail.com";
+	$to = "acousticalinsightswebsite@gmail.com";
 	$mail_subject = "Contact Request From $name | Message ID " . $timestamp_capture;
 	$mail_message = "
 		<br>
@@ -78,7 +77,6 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 		$mail->SMTPAuth = true;                                   //Enable SMTP authentication
 		$mail->Username = 'acousticalinsightswebsite@gmail.com';                     //SMTP username
 		$mail->Password = 'eqsp iptj zngg ppzl';                               //SMTP password
-		// $mail->Password = 'eqsp iptj zngg ppzlee';                               //SMTP password
 
 		$mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
 		$mail->Port = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
