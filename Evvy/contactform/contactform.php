@@ -45,13 +45,10 @@ if (isset($_POST['email']) && !empty($_POST['email'])) {
 		$response['status'] = 'Error';
 		$response['msg'] = 'Our sources have detected unusual traffic. Rejecting. Error Code 3';
 		$response['score'] = $recaptcha_result->getScore();
+		$response['errors'] = $recaptcha_result->getErrorCodes();
 		echo json_encode($response);
 		return;
 	}
-
-
-
-
 
 
 	$to = "acousticalinsightswebsite@gmail.com";
